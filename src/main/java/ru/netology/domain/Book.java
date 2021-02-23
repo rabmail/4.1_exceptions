@@ -1,5 +1,8 @@
 package ru.netology.domain;
 
+import lombok.Data;
+
+@Data
 public class Book extends Product {
     private String author;
     private int pages;
@@ -15,4 +18,5 @@ public class Book extends Product {
         this.pages = pages;
         this.publishedYear = publishedYear;
     }
+
 }

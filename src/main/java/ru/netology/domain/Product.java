@@ -1,5 +1,7 @@
 package ru.netology.domain;
 
+import lombok.Data;
+@Data
 public class Product {
     private int id;
     private String name;
@@ -13,4 +15,6 @@ public class Product {
         this.name = name;
         this.price = price;
     }
+
+
 }
