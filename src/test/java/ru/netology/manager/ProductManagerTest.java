@@ -30,7 +30,7 @@ public class ProductManagerTest {
         int id = 3;
         managers.removeById(id);
         Product[] actual = managers.getAll();
-        Product[] expected = new Product[]{Prod1, Prod2, Prod4, Prod5};
+        Product[] expected = new Product[]{Prod5, Prod4, Prod2, Prod1};
         assertArrayEquals(actual, expected);
     }
     @Test
@@ -41,7 +41,7 @@ public class ProductManagerTest {
         repository.save(Prod4);
         repository.save(Prod5);
         ProductManager managers = new ProductManager(repository);
-        int id = 10;
+        int id = 8;
         assertThrows(NotFoundException.class, () -> managers.removeById(id));
     }
 
